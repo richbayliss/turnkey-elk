@@ -1,0 +1,6 @@
+#!/bin/sh -ex
+
+echo "[20java8]"
+
+# get the installer
+apt-get -y install oracle-java8-installer

@@ -1,0 +1,11 @@
+#!/bin/sh -ex
+
+echo "[40kibana]"
+
+# get the installer
+apt-get -y install kibana
+
+# set to start on boot
+update-rc.d kibana defaults 96 9
+
+

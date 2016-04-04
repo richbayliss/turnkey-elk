@@ -1,0 +1,10 @@
+#!/bin/sh -ex
+
+echo "[30elasticsearch]"
+
+# get the installer
+apt-get -y install elasticsearch
+
+# set to start on boot
+update-rc.d elasticsearch defaults 95 10
+

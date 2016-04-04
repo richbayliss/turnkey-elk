@@ -1,9 +1,14 @@
 #!/bin/bash -ex
 
-update-rc.d logstash defaults
-update-rc.d elasticsearch defaults
-update-rc.d kibana defaults
+#update-rc.d logstash defaults
+#update-rc.d elasticsearch defaults
+#update-rc.d kibana defaults
 
-update-rc.d logstash enable
-update-rc.d elasticsearch enable
-update-rc.d kibana enable
+#update-rc.d logstash enable
+#update-rc.d elasticsearch enable
+#update-rc.d kibana enable
+
+/bin/systemctl enable elasticsearch.service
+/bin/systemctl enable logstash.service
+/bin/systemctl enable kibana.service
+

@@ -5,6 +5,6 @@ echo "[logstash]"
 # get the installer
 apt-get -y install logstash
 
-# set to start on boot
-#update-rc.d elasticsearch defaults 95 10
+# change the permission of the service
+sed -i '/LS_GROUP=logstash/c\LS_GROUP=adm' /etc/init.d/logstash
 
